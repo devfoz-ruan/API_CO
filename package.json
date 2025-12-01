@@ -1,0 +1,33 @@
+{
+  "name": "api_colla",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/devfoz-ruan/API_COLLA#readme",
+  "bugs": {
+    "url": "https://github.com/devfoz-ruan/API_COLLA/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devfoz-ruan/API_COLLA.git"
+  },
+  "license": "ISC",
+  "author": "Ruan Rubino",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "tsx watch src/index.ts"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.5",
+    "@types/node": "^24.10.1",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "socket.io": "^4.8.1"
+  }
+}
