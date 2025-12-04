@@ -1,4 +1,3 @@
-
 import { boolean, integer,  pgTable, serial, text, timestamp } from "drizzle-orm/pg-core";
 
 export const pessoa = pgTable("pessoa", {
@@ -10,7 +9,7 @@ export const pessoa = pgTable("pessoa", {
     createdAt: timestamp("createdAt").defaultNow(),
     updatedAt: timestamp("updatedAt").defaultNow(),
     deletedAt: timestamp("deletedAt"),
-    status: boolean("online").notNull(),
+    status: boolean("status").notNull(),
 });
 
 export const cliente = pgTable("cliente",{
@@ -24,8 +23,7 @@ export const vendendor = pgTable("vendedor",{
         .references(() => pessoa.id)
         .primaryKey(),
     idSetor: integer("idSetor").notNull().references(()=> setor.id),
-    cargo: text("cargo").notNull(),
-    permissoes: integer("permissoes").notNull()
+    idCargo: integer("idCargo").notNull().references(()=> cargo.id)
 });
 
 export const pais= pgTable("pais",{
@@ -90,3 +88,8 @@ export const mensagem = pgTable("mensagem",{
     cliORvend: boolean().notNull()
 })
 
+export const cargo = pgTable("cargo", {
+    id: serial("id").primaryKey(),
+    texto : text("texto").notNull(),
+    permissoes: integer("permissoes").notNull()
+})

@@ -1,16 +1,7 @@
 import { Router } from "express";
-import { pool } from "../database/database";
+import { teste } from "../controllers/teste.controller";
 
-const router = Router();
 
-router.get("/test-db", async (req, res) => {
-  try {
-    const result = await pool.query("SELECT NOW()");
-    res.json({ success: true, time: result.rows[0] });
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: "Erro ao conectar no banco" });
-  }
-});
+export const testRouter = Router();
 
-export default router;
+testRouter.get("/test-db", teste);

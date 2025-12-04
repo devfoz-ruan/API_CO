@@ -8,6 +8,13 @@
       "when": 1764780578501,
       "tag": "0000_panoramic_hydra",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1764863569696,
+      "tag": "0001_boring_war_machine",
+      "breakpoints": true
     }
   ]
 }
