@@ -15,6 +15,13 @@
       "when": 1764863569696,
       "tag": "0001_boring_war_machine",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1764866871202,
+      "tag": "0002_clammy_franklin_storm",
+      "breakpoints": true
     }
   ]
 }

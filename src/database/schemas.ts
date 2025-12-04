@@ -57,6 +57,7 @@ export const enderecoLoja= pgTable("enderecoLoja",{
 export const lojas = pgTable("lojas",{
     id: serial("id").primaryKey(),
     cod: text("cod").notNull(),
+    nome: text("nome").notNull()
 })
 
 export const setor = pgTable("setor",{
